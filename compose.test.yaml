@@ -1,0 +1,17 @@
+# Used only with an isolated, unique -p project by tools/integration_docker.py.
+services:
+  api:
+    image: lead-hunter-api-api:latest
+    ports: !override ['127.0.0.1:18001:8000']
+    environment:
+      LH_EXPERIMENTAL_SEARCH_ENABLED: 'false'
+      LH_RESEARCH_ENABLED: 'false'
+  worker:
+    image: lead-hunter-api-api:latest
+    environment:
+      LH_EXPERIMENTAL_SEARCH_ENABLED: 'false'
+      LH_RESEARCH_ENABLED: 'false'
+  beat:
+    image: lead-hunter-api-api:latest
+  migrate:
+    image: lead-hunter-api-api:latest

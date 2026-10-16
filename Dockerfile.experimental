@@ -1,0 +1,10 @@
+FROM mcr.microsoft.com/playwright/python:v1.59.0-noble
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1
+WORKDIR /srv/app
+COPY requirements-api.txt requirements-api-experimental.txt ./
+RUN pip install -r requirements-api.txt -r requirements-api-experimental.txt && useradd --create-home --uid 10001 leadhunter
+COPY tiktok_api ./tiktok_api
+COPY migrations ./migrations
+COPY alembic.ini .
+USER leadhunter
+CMD ["celery", "-A", "tiktok_api.worker:celery", "worker", "--loglevel=INFO", "--concurrency=1"]

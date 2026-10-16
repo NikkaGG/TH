@@ -1,0 +1,12 @@
+__pycache__/
+.venv/
+data/
+.api-venv/
+.env
+.env.*
+!.env.example
+lead_hunter_api.db*
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+celerybeat-schedule*

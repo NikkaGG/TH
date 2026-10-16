@@ -1,0 +1,9 @@
+*
+!requirements-api.txt
+!requirements-api-experimental.txt
+!tiktok_api/
+!tiktok_api/**
+!migrations/
+!migrations/**
+!alembic.ini
+**/__pycache__

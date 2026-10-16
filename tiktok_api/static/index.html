@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lead Hunter · API</title><link rel="stylesheet" href="/static/styles.css"></head>
+<body>
+<header><div><strong>Lead Hunter</strong><span>Управление аккаунтами и очередью</span></div><a href="/docs" target="_blank" rel="noopener">Документация API ↗</a></header>
+<main>
+<section id="login"><h1>Рабочая панель</h1><p>Введите ключ доступа из конфигурации сервера. Ключ хранится только в памяти этой вкладки.</p>
+<form id="login-form"><label>Ключ доступа<input id="key" type="password" autocomplete="off" required></label><button>Подключиться</button></form></section>
+<div id="workspace" hidden>
+<div class="heading"><div><h1>Рабочая панель</h1><p id="role"></p></div><button id="logout" class="secondary">Выйти</button></div>
+<aside>Автопубликация комментариев под чужими роликами недоступна через подтверждённый публичный API. Система автоматически готовит черновики; публикация выполняется в TikTok вручную. Браузерный поиск, если включён, экспериментальный.</aside>
+<nav><button data-tab="accounts" class="selected">Аккаунты</button><button data-tab="campaigns">Поиск и расписания</button><button data-tab="drafts">Комментарии</button><button data-tab="jobs">Задачи</button></nav>
+<section id="accounts" class="tab"><div class="heading"><h2>Подключённые аккаунты</h2><button id="connect" data-admin>Подключить через TikTok</button></div><p>OAuth запрашивает профиль и свои публичные видео. Для подключения нужен одобренный TikTok app и зарегистрированный HTTPS callback.</p><div id="accounts-list"></div></section>
+<section id="campaigns" class="tab" hidden><h2>Поиск и тематический отбор</h2><div id="campaigns-list"></div>
+<form id="campaign-form" data-operate><h3>Новый сценарий</h3><div class="grid"><label>Название<input name="name" required maxlength="128"></label><label>Аккаунт<select name="account_id" id="account-select" required></select></label>
+<label>Источник<select name="source"><option value="display">Официальный API · свои ролики</option><option value="import">Импортированные ссылки</option><option value="experimental">Экспериментальный публичный поиск</option></select></label>
+<label>Темы через запятую<input name="keywords" placeholder="кофе, кофейня" required></label><label>Исключения через запятую<input name="exclude_keywords"></label><label>Интервал, минут (пусто — вручную)<input name="interval" type="number" min="15" max="10080"></label></div>
+<label>Комментарий для черновика<textarea name="comment_text" maxlength="150" required rows="3"></textarea></label><p>Отбор основан на словах в описании и хештегах. Это не анализ изображения или звука.</p><button>Создать сценарий</button></form>
+<form id="import-form" data-operate><h3>Импортировать ролики</h3><p>По одной строке: полный URL, затем табуляция и описание. Описание можно оставить пустым; такая запись не пройдёт тематический отбор без совпадений.</p><textarea id="import-text" rows="4" placeholder="https://www.tiktok.com/@author/video/1234567890123456789&#9;Описание ролика" required></textarea><button>Импортировать</button></form></section>
+<section id="drafts" class="tab" hidden><h2>Очередь комментариев</h2><p>Перед публикацией проверьте, что в обычной вкладке TikTok выбран нужный аккаунт. Отметка оператора не является подтверждением TikTok.</p><div id="drafts-list"></div></section>
+<section id="jobs" class="tab" hidden><h2>Фоновые задачи</h2><p>Обновление каждые 8 секунд. При ошибке авторизации или проверке TikTok задача останавливается.</p><div id="jobs-list"></div></section>
+</div><p id="message" role="status" aria-live="polite"></p>
+</main><footer>Lead Hunter API · UTC в журнале · <a href="/openapi.json">OpenAPI</a></footer><script src="/static/app.js" defer></script>
+</body></html>

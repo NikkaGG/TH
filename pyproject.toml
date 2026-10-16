@@ -1,0 +1,11 @@
+[tool.pytest.ini_options]
+testpaths = ["tests_api"]
+addopts = "-q"
+
+[tool.ruff]
+target-version = "py313"
+line-length = 120
+include = ["tiktok_api/**/*.py", "tests_api/**/*.py", "migrations/**/*.py", "tools/*api*.py", "tools/research_snapshot.py"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]

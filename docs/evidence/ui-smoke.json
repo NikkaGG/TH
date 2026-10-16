@@ -1,0 +1,8 @@
+{
+  "login": "passed",
+  "tabs": "passed",
+  "logout": "passed",
+  "mobile_overflow": false,
+  "browser_errors": [],
+  "test_data_seeded": false
+}

@@ -1,0 +1,101 @@
+[
+  {
+    "name": "fastapi",
+    "version": "0.143.2",
+    "license_expression": "MIT",
+    "license": null,
+    "classifiers": []
+  },
+  {
+    "name": "starlette",
+    "version": "1.8.0",
+    "license_expression": "BSD-3-Clause",
+    "license": null,
+    "classifiers": []
+  },
+  {
+    "name": "pydantic",
+    "version": "2.14.1",
+    "license_expression": "MIT",
+    "license": null,
+    "classifiers": []
+  },
+  {
+    "name": "pydantic-settings",
+    "version": "2.16.0",
+    "license_expression": "MIT",
+    "license": null,
+    "classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ]
+  },
+  {
+    "name": "SQLAlchemy",
+    "version": "2.1.4",
+    "license_expression": "MIT",
+    "license": null,
+    "classifiers": []
+  },
+  {
+    "name": "httpx",
+    "version": "0.28.1",
+    "license_expression": null,
+    "license": "BSD-3-Clause",
+    "classifiers": [
+      "License :: OSI Approved :: BSD License"
+    ]
+  },
+  {
+    "name": "cryptography",
+    "version": "49.0.0",
+    "license_expression": "Apache-2.0 OR BSD-3-Clause",
+    "license": null,
+    "classifiers": []
+  },
+  {
+    "name": "celery",
+    "version": "5.6.3",
+    "license_expression": null,
+    "license": "BSD-3-Clause",
+    "classifiers": []
+  },
+  {
+    "name": "redis",
+    "version": "6.4.0",
+    "license_expression": "MIT",
+    "license": null,
+    "classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ]
+  },
+  {
+    "name": "psycopg",
+    "version": "3.3.6",
+    "license_expression": "LGPL-3.0-only",
+    "license": null,
+    "classifiers": []
+  },
+  {
+    "name": "alembic",
+    "version": "1.20.0",
+    "license_expression": "MIT",
+    "license": null,
+    "classifiers": []
+  },
+  {
+    "name": "TikTokApi",
+    "version": "7.3.3",
+    "license_expression": null,
+    "license": "MIT",
+    "classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ]
+  },
+  {
+    "name": "playwright",
+    "version": "1.59.0",
+    "license_expression": "Apache-2.0",
+    "license": null,
+    "classifiers": []
+  }
+]

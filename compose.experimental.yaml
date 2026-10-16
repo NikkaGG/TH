@@ -1,0 +1,12 @@
+# Explicit opt-in: docker compose -f compose.yaml -f compose.experimental.yaml up -d --build
+services:
+  api:
+    environment:
+      LH_EXPERIMENTAL_SEARCH_ENABLED: 'true'
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.experimental
+    environment:
+      LH_EXPERIMENTAL_SEARCH_ENABLED: 'true'
+    command: [celery, -A, 'tiktok_api.worker:celery', worker, '--loglevel=INFO', '--concurrency=1']

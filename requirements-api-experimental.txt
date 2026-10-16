@@ -1,0 +1,3 @@
+# Optional, isolated public-data search; no live compatibility promise.
+TikTokApi==7.3.3
+playwright==1.59.0

@@ -1,0 +1,12 @@
+{
+  "checked_at_utc": "2026-10-16T09:24:50.760554Z",
+  "query": "coffee",
+  "count_requested": 3,
+  "tiktokapi": "7.3.3",
+  "playwright": "1.59.0",
+  "account_cookies_used": false,
+  "write_actions": 0,
+  "status": "failed",
+  "error_code": "experimental_empty_response",
+  "elapsed_seconds": 14.34
+}

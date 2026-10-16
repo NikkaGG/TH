@@ -1,0 +1,19 @@
+{
+  "project": "lead-hunter-api-qa-d4a714db",
+  "synthetic_fixtures": true,
+  "live_tiktok_calls": 0,
+  "main_stack_modified": false,
+  "status": "passed",
+  "accounts": 10,
+  "campaigns": 20,
+  "jobs_succeeded": 20,
+  "unique_drafts": 10,
+  "comments_published": 0,
+  "broker": "real Redis",
+  "database": "real PostgreSQL",
+  "workers": "real Celery prefork",
+  "idempotency": "passed",
+  "cross_campaign_deduplication": "passed",
+  "test_containers_and_volumes_removed": true,
+  "elapsed_seconds": 27.31
+}

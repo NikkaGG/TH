@@ -1,0 +1,20 @@
+[
+  ".gitattributes",
+  ".idea/.gitignore",
+  ".idea/inspectionProfiles/Project_Default.xml",
+  ".idea/inspectionProfiles/profiles_settings.xml",
+  ".idea/misc.xml",
+  ".idea/modules.xml",
+  ".idea/pyktok.iml",
+  ".idea/vcs.xml",
+  "LICENSE",
+  "README.md",
+  "app.py",
+  "dist/pyktok-0.0.31-py3-none-any.whl",
+  "dist/pyktok-0.0.31.tar.gz",
+  "pyproject.toml",
+  "src/pyktok/__init__.py",
+  "src/pyktok/__pycache__/pyktok.cpython-310.pyc",
+  "src/pyktok/__pycache__/pyktok.cpython-39.pyc",
+  "src/pyktok/pyktok.py"
+]
